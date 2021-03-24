@@ -12,3 +12,4 @@ six==1.15.0
 sqlparse==0.4.1
 toml==0.10.2
 wrapt==1.12.1
+zemberek-python==0.1.0
