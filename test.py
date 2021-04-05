@@ -14,17 +14,25 @@ from zemberek import (
     TurkishTokenizer
 )
 
-logger = logging.getLogger(__name__)
 
-examples = ["grmek için renklere mi ihtiyacımız var hayatı siyah beyaz sevenlere günaydın",]
 
 morphology = TurkishMorphology.create_with_defaults()
 cumleTemp = ""
-exp = """Bir içimin alacakaranlığına dayanmak meselesi
-Bir bu fena İstanbul akşamını yaşamak
-Nice odaların kapanmış penceresi
-Gene bana iniyor yalnızlığıma sığınmak"""
+exp = """Ağlasam sesimi duyar mısınız
+Mısralarımda
+Dokunabilir misiniz
+Gözyaşlarıma ellerinizle
 
+Bilmezdim şarkıların bu kadar güzel
+Kelimelerinse kifayetsiz olduğunu
+Bu derde düşmeden önce
+
+Bir yer var biliyorum
+Her şeyi söylemek mümkün
+Epeyce yaklaşmışım, duyuyorum
+Anlatamıyorum"""
+print(exp)
+print("#############")
 expList = exp.split()
 for kelime in expList:
 
@@ -34,7 +42,9 @@ for kelime in expList:
     cumleTemp += sa + " "
 print(cumleTemp.lower())
 
+logger = logging.getLogger(__name__)
 
+examples = ["bağamak",]
 
 # SENTENCE NORMALIZATION
 start = time.time()
